@@ -1,0 +1,13 @@
+# vscode
+.vscode
+
+# python
+__pycache__
+dist
+*.egg-info
+*.env
+# testing
+test.py
+test2.py
+*.json
+*.html
