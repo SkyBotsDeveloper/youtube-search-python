@@ -4,7 +4,8 @@
 
 <div align="center">
 
-![yt-search-python]<a href="https://ibb.co/fGdbNGDs"><img src="https://i.ibb.co/fGdbNGDs/photo-2026-03-06-21-34-16.jpg" alt="photo-2026-03-06-21-34-16" border="0"></a>
+[yt-search-python]
+<a href="https://ibb.co/fGdbNGDs"><img src="https://i.ibb.co/fGdbNGDs/photo-2026-03-06-21-34-16.jpg" alt="photo-2026-03-06-21-34-16" border="0"></a>
 
 [![GitHub Stars](https://img.shields.io/github/stars/SkyBotsDeveloper/youtube-search-python?style=for-the-badge&logo=github)](https://github.com/SkyBotsDeveloper/youtube-search-python/stargazers)
 [![GitHub Forks](https://img.shields.io/github/forks/SkyBotsDeveloper/youtube-search-python?style=for-the-badge&logo=github)](https://github.com/SkyBotsDeveloper/youtube-search-python/network)
