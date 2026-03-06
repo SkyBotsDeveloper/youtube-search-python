@@ -1,4 +1,4 @@
-﻿# ðŸ“® YouTube Search Python v2.0.0 
+#  YouTube Search Python v2.0.0 
 - now known as :
 - `yt-search-python`
 
@@ -13,26 +13,26 @@
 
 **Search YouTube without the YouTube Data API v3**
 
-A professional, Modern & actively maintained Python library for searching YouTube contentâ€”completely free and without youtube data API quotas.
+A professional, Modern & actively maintained Python library for searching YouTube contentcompletely free and without youtube data API quotas.
 
-[Features](#-features) â€¢ [Installation](#-installation) â€¢ [Quick Start](#-quick-start) â€¢ [Documentation](#-documentation) â€¢ [Examples](#-examples) â€¢ [Testing](#-testing)
+[Features](#-features)  [Installation](#-installation)  [Quick Start](#-quick-start)  [Documentation](#-documentation)  [Examples](#-examples)  [Testing](#-testing)
 
 </div>
 
 ---
 
-## âœ¨ Features
+##  Features
 
-- ðŸš€ **No API Key Required** - Search YouTube without quotas or rate limits
-- âš¡ **Fast & Reliable** - Optimized for performance with modern httpx
-- ðŸ”„ **Sync & Async Support** - Use synchronous or asynchronous methods
-- âž• **Dual Result Mode** -
+-  **No API Key Required** - Search YouTube without quotas or rate limits
+-  **Fast & Reliable** - Optimized for performance with modern httpx
+-  **Sync & Async Support** - Use synchronous or asynchronous methods
+-  **Dual Result Mode** -
 use ResultMode.dict or json [default dict] as you want
-- ðŸ“¦ **Rich Metadata** - Get videos, channels, playlists, comments, suggestions, recommendations, transcripts & more
-- ðŸŽ¯ **Advanced Filtering** - Sort by date, views, duration, and more
-- ðŸŒ **Multi-Region** - Search with language and region preferences
-- ðŸ”§ **Modern** - Compatible with Python 3.7+ to current and httpx 0.28.1+
-- ðŸ’ª **Type Hints** - Full type annotations for better IDE support
+-  **Rich Metadata** - Get videos, channels, playlists, comments, suggestions, recommendations, transcripts & more
+-  **Advanced Filtering** - Sort by date, views, duration, and more
+-  **Multi-Region** - Search with language and region preferences
+-  **Modern** - Compatible with Python 3.7+ to current and httpx 0.28.1+
+-  **Type Hints** - Full type annotations for better IDE support
 
 ---
 
@@ -42,7 +42,7 @@ use ResultMode.dict or json [default dict] as you want
 - to :
 - `youtubesearchpython.future` only
 
-## ðŸ“¦ Installation
+##  Installation
 
 ### Via Pip
 ```bash
@@ -63,7 +63,7 @@ git+https://github.com/SkyBotsDeveloper/youtube-search-python.git
 
 ---
 
-## ðŸš€ Quick Start
+##  Quick Start
 
 ### Search for Videos
 
@@ -103,7 +103,7 @@ asyncio.run(main())
 
 ---
 
-## ðŸ“š Documentation
+##  Documentation
 
 ### Core Documentations
 - **[Async Page](https://github.com/SkyBotsDeveloper/youtube-search-python/tree/main/youtubesearchpython/future)** - Future Async tab
@@ -139,7 +139,7 @@ asyncio.run(main())
 
 ---
 
-## ðŸ’¡ Examples
+##  Examples
 
 ### Advanced Search with Filters
 
@@ -185,7 +185,7 @@ For more examples, see the [examples directory](docs/examples/).
 
 ---
 
-## ðŸ§ª Testing
+##  Testing
 
 ### Wanna Quick Test ?
 
@@ -195,18 +195,18 @@ python3 full_execution.py
 ```
 
 This comprehensive test suite covers:
-- âœ… All search classes (Videos, Channels, Playlists, Custom)
-- âœ… Content retrieval (Video, Playlist, Channel)
-- âœ… Social features (Comments, Recommendations, Suggestions)
-- âœ… Advanced features (StreamURLFetcher, Transcript)
-- âœ… Both synchronous and asynchronous methods
+-  All search classes (Videos, Channels, Playlists, Custom)
+-  Content retrieval (Video, Playlist, Channel)
+-  Social features (Comments, Recommendations, Suggestions)
+-  Advanced features (StreamURLFetcher, Transcript)
+-  Both synchronous and asynchronous methods
 
 ### Test Documentation
 See [tests/README.md](tests/README.md) for detailed testing information.
 
 ---
 
-## ðŸ”§ Advanced Features
+##  Advanced Features
 
 ### Pagination
 
@@ -219,7 +219,7 @@ search.next()
 print(search.result())
 ```
 
-### ðŸŒŽ Language & Region
+###  Language & Region
 
 ```python
 search = VideosSearch('Music', limit=10, language='es', region='ES')
@@ -234,7 +234,7 @@ Available filters:
 
 ---
 
-## ðŸ¤ Contributing
+##  Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
@@ -246,18 +246,18 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ---
 
-## ðŸ“ License
+##  License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
-## âš ï¸ Disclaimer 
+##  Disclaimer 
 
 This library is not affiliated with YouTube or Google Inc. It uses YouTube's internal API which may change without notice. Use responsibly and in accordance with YouTube's Terms of Content usage and distribution Services.
 
 ---
-## ðŸ” Credits
+##  Credits
 
 - **Maintainer:** [SkyBotsDeveloper](https://github.com/SkyBotsDeveloper)
 - **Telegram:** [@iflexelite](https://t.me/iflexelite)
@@ -265,9 +265,9 @@ This library is not affiliated with YouTube or Google Inc. It uses YouTube's int
 ---
 
 
-## ðŸŒŸ Support & Future of the Library 
+##  Support & Future of the Library 
 
-- If you find this library useful, please consider to support the developer by giving a fork & âœ³ï¸ star on **[GitHub](https://github.com/SkyBotsDeveloper/youtube-search-python)**
+- If you find this library useful, please consider to support the developer by giving a fork &  star on **[GitHub](https://github.com/SkyBotsDeveloper/youtube-search-python)**
 
 - if i found this library is really useful n necessary for everyone i'll keep maintaining on [pypi](https://pypi.org/project/yt-search-python) as :
 ~ `yt-search-python`
@@ -276,9 +276,9 @@ This library is not affiliated with YouTube or Google Inc. It uses YouTube's int
 
 <div align="center">
 
-**Made with â¤ï¸ for the community**
+**Made with  for the community**
 
-[Report Bug](https://github.com/SkyBotsDeveloper/youtube-search-python/issues) â€¢ [Request Feature](https://github.com/SkyBotsDeveloper/youtube-search-python/issues)
+[Report Bug](https://github.com/SkyBotsDeveloper/youtube-search-python/issues)  [Request Feature](https://github.com/SkyBotsDeveloper/youtube-search-python/issues)
 
 </div>
 

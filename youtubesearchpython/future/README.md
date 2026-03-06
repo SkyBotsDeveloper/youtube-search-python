@@ -1,4 +1,4 @@
-﻿## youtube-search-python 
+## youtube-search-python 
 - now as :
 `yt-search-python`  
 
@@ -8,9 +8,9 @@
 [examples](https://github.com/SkyBotsDeveloper/youtube-search-python/docs/)
 ---
 
-## ðŸ” Async Search Usage
+##  Async Search Usage
 
-## Search â€“ videos + channels + playlists
+## Search  videos + channels + playlists
 ```python
 from youtubesearchpython.future import Search
 
@@ -19,7 +19,7 @@ result = await search.next()
 print(result)
 ```
 
-## VideosSearch â€“ only videos
+## VideosSearch  only videos
 ```python
 from youtubesearchpython.future import VideosSearch
 
@@ -28,7 +28,7 @@ result = await search.next()
 print(result)
 ```
 
-## ChannelsSearch â€“ only channels
+## ChannelsSearch  only channels
 ```python
 from youtubesearchpython.uture import ChannelsSearch
 
@@ -37,7 +37,7 @@ result = await search.next()
 print(result)
 ```
 
-## PlaylistsSearch â€“ only playlists
+## PlaylistsSearch  only playlists
 ```python
 from youtubesearchpython.future import PlaylistsSearch
 
@@ -46,7 +46,7 @@ result = await search.next()
 print(result)
 ```
 
-## CustomSearch â€“ filtered search via `searchPreferences`
+## CustomSearch  filtered search via `searchPreferences`
 ```python
 from youtubesearchpython.future import CustomSearch
 
@@ -56,7 +56,7 @@ result = await search.next()
 print(result)
 ```
 
-## ChannelSearch â€“ search inside a channel
+## ChannelSearch  search inside a channel
 ```python
 from youtubesearchpython.future import ChannelSearch
 
@@ -68,7 +68,7 @@ print(result)
 
 ---
 
-# ðŸŽ¬ StreamURLFetcher â€“ Direct YouTube Stream URLs (Experimental)
+#  StreamURLFetcher  Direct YouTube Stream URLs (Experimental)
 
 ## Requirements
 - Call `await fetcher.getJavaScript()` **once** before any extraction.
@@ -123,21 +123,21 @@ print(all_streams)
 ---
 
 ## what's new  v2.0.0 ?
-- Now âœ³ï¸ Recommendations Suggestions, Comments Are Asynced too
-- Added âœ³ï¸ asynced Playlist & Channel Search method classes 
+- Now  Recommendations Suggestions, Comments Are Asynced too
+- Added  asynced Playlist & Channel Search method classes 
 - Fixed Youtube Video Transcripts will need proxy or cookies in netscape format
 - Reuse a single `StreamURLFetcher()` instance for multiple URLs.
 - Avoid calling `getJavaScript()` more than once & use cookies refer to docs.
 - Extraction speed is fast because **no extra network calls** are made when deciphering.
 
 ---
-**âš ï¸ Experimental:**  
+** Experimental:**  
 This library extracts YouTube data **without YouTube Data API v3**.  
 It depends on public YouTube endpoints and may break anytime due to internal changes.  
 
 
 
-## ðŸ‘¤ Dev
+##  Dev
 **SkyBotsDeveloper**  
 [GitHub](https://github.com/SkyBotsDeveloper)  
 [Telegram](https://t.me/iflexelite)

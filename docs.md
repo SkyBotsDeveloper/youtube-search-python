@@ -1,4 +1,4 @@
-﻿## Quick Documentations âœ³ï¸
+## Quick Documentations 
 
 ### This is the updated and complete documentation for yt-search-python, highlighting modern async-first design.
  For full usage guides and examples, [visit the Docs:](https://github.com/SkyBotsDeveloper/youtube-search-python/docs/)
@@ -6,7 +6,7 @@
 
 ---
 
-## ðŸš€ Modern Async API [future] â€” New in v2.0.0
+##  Modern Async API [future]  New in v2.0.0
 
 ### yt-search-python introduces a fully modern asynchronous API under the youtubesearchpython.future module with modern Features that Not Even One Single Library offers in the world that is recommendations & Search Suggestions.
 
@@ -76,9 +76,9 @@ Sync Constructor:
 
 Sync Methods:
 
-`result(mode) â€” returns current results`
+`result(mode)  returns current results`
 
-`next() â€” fetch next page`
+`next()  fetch next page`
 
 
 Async Version:
@@ -256,12 +256,12 @@ Get related videos via video_id.
 
 Sync:
 
-`get(videoId)` â†’ list
+`get(videoId)`  list
 
 
 Async:
 
-`await Recommendations.get(videoId)` â†’ list
+`await Recommendations.get(videoId)`  list
 
 
 
