@@ -5,9 +5,7 @@
 <div align="center">
 
 <p align="center">
-  <a href="https://ibb.co/fGdbNGDs">
-    <img src="https://i.ibb.co/fGdbNGDs/photo-2026-03-06-21-34-16.jpg" alt="Banner" width="100%">
-  </a>
+  <img src="https://i.ibb.co/fGdbNGDs/photo-2026-03-06-21-34-16.jpg" alt="Banner" width="100%">
 </p>
 
 [![GitHub Stars](https://img.shields.io/github/stars/SkyBotsDeveloper/youtube-search-python?style=for-the-badge&logo=github)](https://github.com/SkyBotsDeveloper/youtube-search-python/stargazers)
