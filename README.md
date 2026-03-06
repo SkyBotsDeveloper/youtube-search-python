@@ -269,9 +269,6 @@ This library is not affiliated with YouTube or Google Inc. It uses YouTube's int
 
 - If you find this library useful, please consider to support the developer by giving a fork &  star on **[GitHub](https://github.com/SkyBotsDeveloper/youtube-search-python)**
 
-- if i found this library is really useful n necessary for everyone i'll keep maintaining on [pypi](https://pypi.org/project/yt-search-python) as :
-~ `yt-search-python`
-
 ---
 
 <div align="center">
@@ -281,4 +278,3 @@ This library is not affiliated with YouTube or Google Inc. It uses YouTube's int
 [Report Bug](https://github.com/SkyBotsDeveloper/youtube-search-python/issues)  [Request Feature](https://github.com/SkyBotsDeveloper/youtube-search-python/issues)
 
 </div>
-
