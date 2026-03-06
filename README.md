@@ -4,7 +4,7 @@
 
 <div align="center">
 
-![yt-search-python](https://telegraphv1.vercel.app/i/2mh77obs)
+![yt-search-python](https://ibb.co/fGdbNGDs)
 
 [![GitHub Stars](https://img.shields.io/github/stars/SkyBotsDeveloper/youtube-search-python?style=for-the-badge&logo=github)](https://github.com/SkyBotsDeveloper/youtube-search-python/stargazers)
 [![GitHub Forks](https://img.shields.io/github/forks/SkyBotsDeveloper/youtube-search-python?style=for-the-badge&logo=github)](https://github.com/SkyBotsDeveloper/youtube-search-python/network)
