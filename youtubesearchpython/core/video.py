@@ -98,6 +98,15 @@ class VideoCore(RequestCore):
         })
         self.data = copy.deepcopy(CLIENTS[self.overridedClient])
 
+    def _is_usable_player_response(self) -> bool:
+        if not isinstance(self.responseSource, dict):
+            return False
+        if self.componentMode == "getFormats":
+            return "streamingData" in self.responseSource
+        if self.componentMode == "getInfo":
+            return "videoDetails" in self.responseSource
+        return "videoDetails" in self.responseSource
+
     async def async_create(self):
         for client in ["ANDROID", "WEB", "MWEB", "TV_EMBED"]:
             self.overridedClient = client
@@ -106,9 +115,16 @@ class VideoCore(RequestCore):
             if response is not None and response.status_code == 200:
                 self.response = response.text
                 self.__parseSource()
-                if self.responseSource and 'videoDetails' in self.responseSource:
+                if self._is_usable_player_response():
                     await self.async_post_request_processing()
                     return
+        if self.componentMode == "getFormats":
+            self.result = {
+                "id": getVideoId(self.videoLink),
+                "streamingData": None,
+            }
+            self.__videoComponent = self.result
+            return
         
         try:
             search_data = await self.__getVideoDataFromSearchAsync(getVideoId(self.videoLink))
@@ -130,9 +146,16 @@ class VideoCore(RequestCore):
             if response is not None and response.status_code == 200:
                 self.response = response.text
                 self.__parseSource()
-                if self.responseSource and 'videoDetails' in self.responseSource:
+                if self._is_usable_player_response():
                     self.post_request_processing()
                     return
+        if self.componentMode == "getFormats":
+            self.result = {
+                "id": getVideoId(self.videoLink),
+                "streamingData": None,
+            }
+            self.__videoComponent = self.result
+            return
         
         try:
             search_data = self.__getVideoDataFromSearch(getVideoId(self.videoLink))
@@ -595,9 +618,12 @@ class VideoCore(RequestCore):
             
             videoComponent.update(component)
         if mode in ["getFormats", None]:
-            videoComponent.update(
-                {"streamingData": getValue(self.responseSource, ["streamingData"])}
-            )
+            if "id" not in videoComponent:
+                videoComponent["id"] = (
+                    getValue(self.responseSource, ["videoDetails", "videoId"])
+                    or getVideoId(self.videoLink)
+                )
+            videoComponent["streamingData"] = getValue(self.responseSource, ["streamingData"])
         if self.enableHTML:
             html_publish_date = getValue(
                 self.HTMLresponseSource,
@@ -738,9 +764,12 @@ class VideoCore(RequestCore):
             
             videoComponent.update(component)
         if mode in ["getFormats", None]:
-            videoComponent.update(
-                {"streamingData": getValue(self.responseSource, ["streamingData"])}
-            )
+            if "id" not in videoComponent:
+                videoComponent["id"] = (
+                    getValue(self.responseSource, ["videoDetails", "videoId"])
+                    or getVideoId(self.videoLink)
+                )
+            videoComponent["streamingData"] = getValue(self.responseSource, ["streamingData"])
         if self.enableHTML:
             html_publish_date = getValue(
                 self.HTMLresponseSource,

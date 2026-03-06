@@ -33,7 +33,7 @@ class Video:
         '''
         videoInternal = VideoCore(videoLink, "getFormats", mode, timeout, False)
         videoInternal.sync_create()
-        return videoInternal.formats
+        return videoInternal.result
 
 
 class Playlist:

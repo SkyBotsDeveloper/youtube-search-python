@@ -32,6 +32,7 @@ class StreamURLFetcherCore(RequestCore):
         self._js_url = None
         self._js = None
         self.video_id = None
+        self.format_id = None
         self._streams = []
 
         ydl_opts = {
@@ -47,17 +48,56 @@ class StreamURLFetcherCore(RequestCore):
         self.ytie = YoutubeIE()
         self.ytie.set_downloader(self.downloader)
 
+    def _fill_with_ytdlp_formats(self) -> None:
+        if not self.video_id:
+            return
+        try:
+            info = self.downloader.extract_info(
+                f"https://www.youtube.com/watch?v={self.video_id}",
+                download=False,
+            )
+            formats = info.get("formats", []) if isinstance(info, dict) else []
+            for fmt in formats:
+                fmt_url = fmt.get("url")
+                if not fmt_url:
+                    continue
+                format_id = fmt.get("format_id")
+                itag = None
+                if isinstance(format_id, str) and format_id.isdigit():
+                    itag = int(format_id)
+                elif isinstance(format_id, int):
+                    itag = format_id
+
+                if self.format_id is not None and itag != self.format_id:
+                    continue
+
+                stream = {
+                    "itag": itag if itag is not None else format_id,
+                    "url": fmt_url,
+                    "quality": fmt.get("format_note") or fmt.get("quality"),
+                    "mimeType": fmt.get("ext"),
+                    "throttled": False,
+                }
+                self._streams.append(stream)
+                if self.format_id is not None:
+                    return
+        except Exception:
+            return
+
     def _getDecipheredURLs(self, videoFormats: dict, formatId: int = None) -> None:
         self._streams = []
+        self.format_id = formatId
         self.video_id = videoFormats.get("id")
         if not self.video_id:
             return
 
         streaming_data = videoFormats.get("streamingData")
         if not streaming_data:
+            self._fill_with_ytdlp_formats()
             return
 
         if not streaming_data.get("formats") and not streaming_data.get("adaptiveFormats"):
+            self._fill_with_ytdlp_formats()
             return
 
         self._streaming_data = copy.deepcopy(streaming_data)
@@ -65,8 +105,9 @@ class StreamURLFetcherCore(RequestCore):
         self._player_response = copy.deepcopy(streaming_data.get("formats", []))
         self._player_response.extend(streaming_data.get("adaptiveFormats", []))
 
-        self.format_id = formatId
         self._decipher()
+        if not self._streams:
+            self._fill_with_ytdlp_formats()
         
 
     def extract_js_url(self, res: str):
