@@ -44,11 +44,6 @@ use ResultMode.dict or json [default dict] as you want
 
 ##  Installation
 
-### Via Pip
-```bash
-pip3 install yt-search-python
-```
-
 ### Via Git
 
 ```bash
