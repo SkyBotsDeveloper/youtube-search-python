@@ -2,6 +2,8 @@
 
 Thank you for your interest in contributing to youtube-search-python.
 
+special thanks to https://github.com/BillaSpace/yt-search-python
+
 This project aims to provide a lightweight Python library for searching YouTube without requiring the YouTube Data API.
 
 ## How to contribute
